@@ -13,6 +13,8 @@ function addTask(){
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
         li.appendChild(span);
+
+
     }
     inputBox.value = '';
 }
@@ -26,3 +28,10 @@ listContainer.addEventListener("click", function(e){
         e.target.parentElement.remove();
     }
 }, false);
+
+
+inputBox.addEventListener("keydown", function(e){
+    if (e.keyCode === 13 ) {
+        addTask();
+    }
+});
